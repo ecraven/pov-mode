@@ -2148,7 +2148,7 @@ Maybe you misspelled it?" target-file current-directory-target-file)))))
 	  (equal 0 (process-exit-status process))
 	  (not pov-errors))
 	 (setq pov-rendered-succesfully t)
-	 (message "Image rendered succesfully"))
+	 (message "Image rendered successfully"))
 	(t
 	 (message (concat "Errors in " (process-name process)
 			  ", press C-c C-c l to display"))
