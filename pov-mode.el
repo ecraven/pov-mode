@@ -1961,7 +1961,7 @@ and autocompleted, default is word at point"
 ;;MP
 (defun pov-open-include-file nil
   (interactive)
-  "Open one of the standard include files"
+  "Open one of the standard include files or a file in the current directory."
   (let* ((default (current-word))
 	 (input (completing-read
 		 (format
@@ -1970,11 +1970,14 @@ and autocompleted, default is word at point"
 	 (kw (if (equal input "")
 		 (concat default ".inc")
 	       input))
-	 (target-file (concat (file-name-as-directory pov-include-dir) kw)))
+	 (target-file (concat (file-name-as-directory pov-include-dir) kw))
+	 (current-directory-target-file (concat default-directory kw)))
     (if (file-exists-p target-file)
 	(find-file-read-only target-file)
-      (message "I can't find %s.
-Maybe you misspelled it?" target-file))))
+      (if (file-exists-p current-directory-target-file)
+	  (find-file current-directory-target-file)
+	(message "I can't find %s in pov-include-dir or the current directory.
+Maybe you misspelled it?" target-file current-directory-target-file)))))
 
 					; ***************************
 					; *** Commands for povray ***
