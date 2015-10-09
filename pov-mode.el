@@ -606,6 +606,11 @@ This may take a while on large files.  Maybe disable this on slow systems."
   :type 'boolean
   :group 'pov)
 
+(defcustom pov-browse-url #'browse-url
+  "*Which browse-url function to use for showing the documentation."
+  :type 'function
+  :group 'pov)
+
 (defcustom pov-imenu-in-menu t
   "*Non-nil means have #locals, #declares, #macros and something else
 in a menu called PoV in the menubar. This permits to jump to the point of the
@@ -1872,7 +1877,7 @@ without questions"
 
 (defun pov-keyword-help nil
   "look up the appropriate place for keyword in the POV documentation
-using an external browser (set by browse-url.el). Keyword can be entered
+using an external browser (set by pov-browse-url). Keyword can be entered
 and autocompleted, default is word at point"
   (interactive)
   (let* ((default (current-word))
@@ -1909,7 +1914,7 @@ and autocompleted, default is word at point"
 		     (setq target-file (concat
 					pov-documentation-keyword-index
 					target-file)))
-		 (browse-url (concat "file://" (file-name-as-directory
+		 (funcall pov-browse-url (concat "file://" (file-name-as-directory
 						pov-documentation-directory)
 				     target-file)))
 	(progn (set-buffer buffer-index)
@@ -1922,7 +1927,7 @@ and autocompleted, default is word at point"
 					; just the 1^ entry
 		   (progn (re-search-forward "href=\"\\([^\"]+\\)\">")
 			  (setq target-file (match-string-no-properties 1))
-			  (browse-url (concat "file://"
+			  (funcall pov-browse-url (concat "file://"
 					      (file-name-as-directory
 					       pov-documentation-directory)
 					      target-file)))
