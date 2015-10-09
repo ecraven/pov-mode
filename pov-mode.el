@@ -60,14 +60,14 @@
 ;; pov-documentation-directory. You can set these by using M-x
 ;; set-variable or M-x customize-group RET pov RET.
 ;;
-;; Byte compile the pov-mode.el to make it load faster. 
+;; Byte compile the pov-mode.el to make it load faster.
 ;; Type M-x byte-compile-file.
 ;;
 ;; To read pov-mode documentation, type M-x pov-mode then C-h m.
 ;; To access the pov-mode info file type C-u C-h i RET. This will
 ;; prompt you for  a file: give the pov-mode.info file that you can
 ;; find in the pov-mode.el directory. Or install somewhere in your
-;; INFOPATH and run install-info pov-mode.info dir. 
+;; INFOPATH and run install-info pov-mode.info dir.
 ;;
 ;; Download and install somewhere the InsertMenu directory, if you
 ;; want this nice feature. I'd recommend you to unpack it in the same
@@ -75,7 +75,7 @@
 ;; variable pov-insertmenu-location has the correct value. It is
 ;; possible that <http://www.imagico.de/> has a fresher version of
 ;; this package.
-;; 
+;;
 ;;; Change Log:
 ;;
 ;;Modified by: Peter Boettcher <pwb@andrew.cmu.edu>
@@ -157,7 +157,7 @@
 ;; 2000-09-12 Version 2.5.b2
 ;;    Added basic support for megapov
 ;;    Bob Pepin fixed a bug in test to select external/internal viewer.
-;;    forts‰tt pÂ kapitel 5.6
+;;    forts√§tt p√• kapitel 5.6
 ;; 2001-04-05 Version 2.6
 ;;    Added the capability to open standard include files by pressing
 ;;        C-c i. It opens the file entered ro.
@@ -204,9 +204,9 @@
 ;; 2008-02-13
 ;;    Fixed faces to be consistent with other languages
 ;;     (as much as possible). If you don't like, customize it via
-;;     M-x customize-group pov. Beware! It has not been tested on Xemacs 
+;;     M-x customize-group pov. Beware! It has not been tested on Xemacs
 ;;     nor earlier versions of GNU emacs
-;; 2008-02-16 Version 2.14 
+;; 2008-02-16 Version 2.14
 ;;    Rewrited from scratch the pov-keyword-help function
 ;;     and commented out the old one, because the povuser.txt no more
 ;;     exists. Now the pov-mode.el open an external browser to find
@@ -218,39 +218,39 @@
 ;;     Your documentation (for Mac or for previous or later version
 ;;     of PoV-ray) may be somewhere else. Please let me know.
 ;; 2008-02-17 Version 2.15
-;;    Created the tool-bar for GNU Emacs 22.1 (and maybe for previous 
-;;     releases. If you are running GNU Emacs < 22 and the toolbar 
+;;    Created the tool-bar for GNU Emacs 22.1 (and maybe for previous
+;;     releases. If you are running GNU Emacs < 22 and the toolbar
 ;;     works (with 2 icons, for view and for rendering, let me know)
 ;; 2008-02-17 Version 2.16
-;;    Fixed a portability bug. Uses browse-url instead of 
+;;    Fixed a portability bug. Uses browse-url instead of
 ;;     browse-url-generic. Use the customize-group browse-url to choose
 ;;     the browser.
 ;;     Thanks to Xah Lee for point this out.
-;;    Cleaned code for compilation. However something still remains for 
-;;     suspect compatibily with Xemacs. Please let me if Xemacs works 
+;;    Cleaned code for compilation. However something still remains for
+;;     suspect compatibily with Xemacs. Please let me if Xemacs works
 ;;     with this package.
-;;    Cleaned code and dropped prehistorical releases of (X)emacs that 
-;;     don't support customization. The old package still exists. If 
-;;     you stuck with older versions, use the older version of this 
-;;     package too.   ;-)   
+;;    Cleaned code and dropped prehistorical releases of (X)emacs that
+;;     don't support customization. The old package still exists. If
+;;     you stuck with older versions, use the older version of this
+;;     package too.   ;-)
 ;; 2008-02-20 Version 2.17
-;;    Added a menu for rendering and one for the preview. I didn't use 
-;;     the lisp libraries, just modified the keymap. Needs testing with 
+;;    Added a menu for rendering and one for the preview. I didn't use
+;;     the lisp libraries, just modified the keymap. Needs testing with
 ;;     xemacs.
 ;;    Upgraded to POV-Ray 3.6
-;; 2008-02-23 Version 2.18 
+;; 2008-02-23 Version 2.18
 ;;    Cleaned the InsertMenu directory and added a pair of templates.
 ;;    If you like this mode, please *donate* a spare scene to be inserted
-;;     in the InserMenu. 
+;;     in the InserMenu.
 ;;    Fixed the imenu critical bug that messed up the menubar.
 ;;     Not tested with xemacs
-;;    I consider this release quite stable. If you find a bug feel 
+;;    I consider this release quite stable. If you find a bug feel
 ;;     free to contact me. I'll try to fix it.
 ;; 2008-02-24 Version 2.19
 ;;    Fixed a minor bug that prevented the viewer to get the file name.
 ;;     This happens when the path directory is too long and the output of
-;;     povray wrap words. I didn't discard the old code. If the buffer 
-;;     search fails, it uses the basename of current buffer appending 
+;;     povray wrap words. I didn't discard the old code. If the buffer
+;;     search fails, it uses the basename of current buffer appending
 ;;     the default extension (png for unix, bmp for windoze).
 ;;    Added a lot of keybindings for rendering and viewers.
 ;; 2008-03-01 Version 2.20
@@ -266,31 +266,31 @@
 ;;    Added some documentation in the commentary
 ;; 2008-03-09 Version 3.0
 ;;    Dropped xemacs compatibility (I can't maintain this). Cleaned code.
-;;    The InsertMenu becomes just an add-on. Added the code to turn on and 
+;;    The InsertMenu becomes just an add-on. Added the code to turn on and
 ;;     off the support to this feature.
 ;;    Added the control to the Errors with exit code 0 (!)
 ;;    Added the var "pov-isosurface-keyword" that was declared but void
-;; 2008-03-19 
+;; 2008-03-19
 ;;    Added documentation (thanks to Xah Lee)
 ;;    Solved the InsertMenu question with the POV-Ray team. Thanks to
 ;;     Christoph Hormann <http://www.imagico.de>, one of the authors of
 ;;     the InsertMenu. This package is covered by the POV-Ray license.
 ;;    There is a commented function pov-online-search for keyword
 ;;     lookup in the on-line documentation, but still needs a lot of
-;;     development. 
+;;     development.
 ;; 2008-04-18 Version 3.1 just a minor change
 ;;     Resized the icons to suite the 24x24 pixel standard
 ;;     Added a new Misc menu for comment, uncomment and doc lookup
 ;;     Fixed the pov-open-include-file function to prompt to existing files
-;; 2008-04-28 
+;; 2008-04-28
 ;;     Added the autoloads for elpa and package.el
 ;;     Fixed a minor #macro indenting bug
-;; 2008-05-24 Version 3.2 
+;; 2008-05-24 Version 3.2
 ;;     Written the texinfo manual. No code improvement (sorry)
-;; 2008-05-26 
+;; 2008-05-26
 ;;     Minor changes to the info manual. Thanks to Xah Lee.
 ;; 2012-08-25 Version 3.3
-;;     Bug fixes for warnings. Don't require cl at runtime. Tested with 
+;;     Bug fixes for warnings. Don't require cl at runtime. Tested with
 ;;     GNU Emacs 22, 23 and 24
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -298,7 +298,7 @@
 ;;        Cre Date:     04 March 1994
 ;; This file derived from postscript mode by Chris Maio
 ;;
-;;  Please send bug reports/comments/suggestions and of course patches to 
+;;  Please send bug reports/comments/suggestions and of course patches to
 ;;           Marco Pessotto
 ;;        <melmothx@gmail.com>
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -359,16 +359,16 @@
        (<= 22 emacs-major-version))) ; this time let emacs grow
 
 (defvar font-pov-is-Emacs
-  (or font-pov-is-Emacs19 
-      font-pov-is-Emacs20 
-      font-pov-is-Emacs21 
+  (or font-pov-is-Emacs19
+      font-pov-is-Emacs20
+      font-pov-is-Emacs21
       font-pov-is-Emacs22))
 ;;; font-pov-is-Emacs returns t, font-pov-is-Emacs22 t, anything else nil
 
 (unless	(or font-pov-is-Emacs20
 	    font-pov-is-Emacs21 font-pov-is-Emacs22)
   (error "PoV-mode requires GNU Emacs >= 20"))
-    
+
 
 ;; initialize the variables to avoid compilation warnings
 (defvar povray-command)
@@ -421,7 +421,7 @@
 
 (eval-when-compile (require 'cl))
 (require 'imenu)
-(require 'font-lock) 
+(require 'font-lock)
 (require 'browse-url)
 (require 'newcomment)
 
@@ -452,12 +452,12 @@
   :group 'pov
   )
 
-(defcustom pov-insertmenu-location 
-  (file-name-as-directory 
-   (concat 
-    (file-name-directory 
+(defcustom pov-insertmenu-location
+  (file-name-as-directory
+   (concat
+    (file-name-directory
      (locate-library "pov-mode")) "InsertMenu"))
-  "*Path to the InsertMenu directory. You need a valid location for 
+  "*Path to the InsertMenu directory. You need a valid location for
 this feature"
   :type 'directory
   :group 'pov
@@ -468,7 +468,7 @@ this feature"
   :type 'string
   :group 'pov)
 
-(defcustom pov-external-viewer-command 
+(defcustom pov-external-viewer-command
   (cond
    ((memq system-type '(windows-nt ms-dos cygwin darwin))
     "open")
@@ -483,18 +483,18 @@ this feature"
   :type 'string
   :group 'pov)
 
-(defcustom  pov-default-image-extension 
+(defcustom  pov-default-image-extension
   (cond
    ((memq system-type '(windows-nt ms-dos cygwin))
     "bmp")
    (t "png")) ;; MP
-  "*The default extension of the output image. Windows user should 
+  "*The default extension of the output image. Windows user should
 set it to bmp It you are going to customize this options, you must
 customize the options of the povray commands also. So beware!"
   :type 'string
   :group 'pov)
 
-(defcustom pov-default-view-internal t 
+(defcustom pov-default-view-internal t
   "*Should the pictures be displayed internally by default?"
   :type 'boolean
   :group 'pov
@@ -533,15 +533,15 @@ by the filename)."
   :group 'pov
   )
 
-(defcustom pov-icons-location (file-name-directory 
+(defcustom pov-icons-location (file-name-directory
 			       (locate-library "pov-mode"))
-  "*Location of the menubaricons. Change only if you want 
+  "*Location of the menubaricons. Change only if you want
 to try your own icons"
   :type 'directory
   :group 'pov
   )
 
-      
+
 
 
 (defvar pov-external-view
@@ -578,13 +578,13 @@ to try your own icons"
 				      '()))
   "the commands to run")
 
-      
+
 (defcustom pov-documentation-index "idx.html"
   "*Edit this only if the search-keyword function doesn't work!
 This file should contain the general index for *all* the documentation"
   :type 'file
   :group 'pov)
-      
+
 (defcustom pov-documentation-keyword-index "s_97.html"
   "*Edit this only if the search-keyword function doesn't work!
 This file (tested on povlinux-3.6) should contain the index for the keywords (section 3)"
@@ -598,14 +598,14 @@ pov-mode when loaded, unless those file-endings are already in use."
   :group 'pov)
 
 (defcustom pov-fontify-insanely t
-  "*Non-nil means colorize every povray keyword.  
+  "*Non-nil means colorize every povray keyword.
 This may take a while on large files.  Maybe disable this on slow systems."
   :type 'boolean
   :group 'pov)
 
-(defcustom pov-imenu-in-menu t 
+(defcustom pov-imenu-in-menu t
   "*Non-nil means have #locals, #declares, #macros and something else
-in a menu called PoV in the menubar. This permits to jump to the point of the 
+in a menu called PoV in the menubar. This permits to jump to the point of the
 buffer where this # has been declared."
   :type 'boolean
   :group 'pov)
@@ -621,7 +621,7 @@ buffer where this # has been declared."
   :group 'pov)
 
 (defcustom pov-autoindent-endblocks t
-  "*When non-nil, automatically reindents when you type break, 
+  "*When non-nil, automatically reindents when you type break,
 end, or else."
   :type 'boolean
   :group 'pov
@@ -641,7 +641,7 @@ end, or else."
   "*Turn on syntax highlighting automatically"
   :type 'boolean
   :group 'pov)
-      
+
 
 
 (defcustom font-pov-csg-face 'font-lock-function-name-face
@@ -651,17 +651,17 @@ font-pov-csg-face"
   :group 'pov)
 
 (defcustom font-pov-object-face 'font-lock-type-face
-  "*What color does objects have. Also try 
+  "*What color does objects have. Also try
 font-pov-object-face"
   :type 'face
   :group 'pov)
 
-(defcustom font-pov-variable-face 'font-lock-variable-name-face 
+(defcustom font-pov-variable-face 'font-lock-variable-name-face
   "*What color does variables (in declarations) have. Also try
 font-pov-variable-face"
   :type 'face
   :group 'pov)
-      
+
 (defcustom font-pov-macro-name-face 'default
   "*Face to use for #macro names. Just black and white. Try also
 font-pov-macro-name-face"
@@ -669,33 +669,33 @@ font-pov-macro-name-face"
   :group 'pov
   )
 
-(defcustom font-pov-operator-face  'default 
+(defcustom font-pov-operator-face  'default
   "*Face to use for PoV operators. Just black and white. You should try
-font-pov-operator-face or font-lock-builtin-face to get the most of the 
+font-pov-operator-face or font-lock-builtin-face to get the most of the
 syntax coloring "
   :type 'face
   :group 'pov)
 
 
-(defcustom font-pov-directive-face 'font-lock-preprocessor-face 
-  "*What color does (#)-directives have. Also try 
+(defcustom font-pov-directive-face 'font-lock-preprocessor-face
+  "*What color does (#)-directives have. Also try
 font-pov-directive-face"
   :type 'face
   :group 'pov)
 
 (defcustom font-pov-number-face 'default
-  "*What color does numbers have. Just black and white. Try 
+  "*What color does numbers have. Just black and white. Try
 font-pov-number-face or font-lock-constant-face to view colored number"
   :type 'face
   :group 'pov)
 
 (defcustom font-pov-keyword-face 'font-lock-keyword-face
-  "*What color does keywords have. Also try 
+  "*What color does keywords have. Also try
 font-pov-keyword-face"
   :type 'face
   :group 'pov)
 ;;      ))
-	
+
 
 
 
@@ -707,12 +707,12 @@ font-pov-keyword-face"
 ;; (cond ((or font-pov-is-XEmacs20-2 font-pov-is-Emacs20)
 ;;        (when pov-turn-on-font-lock
 ;; 	 (turn-on-font-lock))
-       ;; associate *.pov and *.inc with pov if flag is set and no other
-       ;; modes already have
+;; associate *.pov and *.inc with pov if flag is set and no other
+;; modes already have
 ;;;###autoload (add-to-list 'auto-mode-alist '("\\.pov\\'" . pov-mode))
 ;;;###autoload (add-to-list 'auto-mode-alist '("\\.inc\\'" . pov-mode))
 
-(cond (pov-associate-pov-and-inc-with-pov-mode-flag 
+(cond (pov-associate-pov-and-inc-with-pov-mode-flag
        (when (not (assoc "\\.pov\\'" auto-mode-alist))
 	 (add-to-list 'auto-mode-alist '("\\.pov\\'" . pov-mode)))
        (when (not (assoc "\\.inc\\'" auto-mode-alist))
@@ -722,16 +722,16 @@ font-pov-keyword-face"
 (defvar font-pov-do-multi-line t
   "*Set this to nil to disable the multi-line fontification prone to infinite loop bugs.")
 
-(defun font-pov-setup ()  
+(defun font-pov-setup ()
   "Setup this buffer for PoV font-lock."
   (if (or font-pov-is-Emacs20 font-pov-is-Emacs21 font-pov-is-Emacs22)
-    ;; Tell Font Lock about the support.
-    (make-local-variable 'font-lock-defaults)))
+      ;; Tell Font Lock about the support.
+      (make-local-variable 'font-lock-defaults)))
 
 
 
 (cond
- ((or font-pov-is-Emacs20 font-pov-is-XEmacs20-2 
+ ((or font-pov-is-Emacs20 font-pov-is-XEmacs20-2
       font-pov-is-Emacs21 font-pov-is-Emacs22)
   (defface font-pov-object-face
     '((((class grayscale) (background light)) (:foreground "DimGray" :bold t))
@@ -741,7 +741,7 @@ font-pov-keyword-face"
       (t (:bold t)))
     "Font Lock mode face used for objects."
     :group 'font-pov-faces)
-  
+
   (defface font-pov-directive-face
     '((((class grayscale) (background light)) (:foreground "DimGray"))
       (((class grayscale) (background dark))  (:foreground "LightGray"))
@@ -750,7 +750,7 @@ font-pov-keyword-face"
       (t (:italic t)))
     "Font Lock mode face used to highlight PoV directives."
     :group 'font-pov-faces)
-  
+
   (defface font-pov-number-face
     '((((class grayscale) (background light))(:foreground "DimGray" :underline t))
       (((class grayscale) (background dark)) (:foreground "LightGray" :underline t))
@@ -759,7 +759,7 @@ font-pov-keyword-face"
       (t (:underline t)))
     "Font Lock mode face used to highlight numbers in PoV."
     :group 'font-pov-faces)
-  
+
   (defface font-pov-variable-face
     '((((class grayscale) (background light)) (:foreground "DimGray"))
       (((class grayscale) (background dark))  (:foreground "LightGray"))
@@ -768,7 +768,7 @@ font-pov-keyword-face"
       )
     "Font Lock mode face used to highlight variabledeclarations in PoV."
     :group 'font-pov-faces)
-  
+
   (defface font-pov-csg-face
     '((((class grayscale) (background light)) (:foreground "DimGray"))
       (((class grayscale) (background dark))  (:foreground "LightGray"))
@@ -777,8 +777,8 @@ font-pov-keyword-face"
       )
     "Font Lock mode face used to highlight CSGs in PoV."
     :group 'font-pov-faces)
-  
-;; -- C.H. --
+
+  ;; -- C.H. --
 
   (defface font-pov-macro-name-face
     '((((class grayscale) (background light)) (:foreground "DimGray" :bold t))
@@ -798,7 +798,7 @@ font-pov-keyword-face"
     "Font Lock mode face used to highlight general keywords in PoV."
     :group 'font-pov-faces)
 
-;; -- end C.H. --
+  ;; -- end C.H. --
 
 
   (defface font-pov-operator-face
@@ -832,7 +832,7 @@ font-pov-keyword-face"
 (defvar pov-comment-syntax-string ". 124b"
   "PoV hack to handle Emacs/XEmacs foo")
 
-(defvar pov-begin-re 
+(defvar pov-begin-re
   "\\<#\\(if\\(n?def\\)?\\|case\\|macro\\|range\\|switch\\|while\\)\\>")
 
 (defvar pov-end-re  "\\<#break\\|#end\\>")
@@ -847,9 +847,9 @@ font-pov-keyword-face"
 			  pov-else-re))
 
 (defun pov-setup-syntax-table nil
-;;   (if (or (string-match "Lucid" emacs-version)
-;; 	  (string-match "XEmacs" emacs-version))
-;;       (setq pov-comment-syntax-string ". 1456"))
+  ;;   (if (or (string-match "Lucid" emacs-version)
+  ;; 	  (string-match "XEmacs" emacs-version))
+  ;;       (setq pov-comment-syntax-string ". 1456"))
   (if pov-mode-syntax-table
       ()
     (setq pov-mode-syntax-table (make-syntax-table))
@@ -990,10 +990,10 @@ font-pov-keyword-face"
 			  "vrotate" "vstr" "vturbulence" "warning"
 			  "warp" "water_level" "waves" "while" "width"
 			  "wood" "wrinkles" "write" "yes"
-;; I think we don't need this, however...			  
+			  ;; I think we don't need this, however...
 			  "x" "y" "z"
 			  )
-			  t) "\\)\\>")))
+			t) "\\)\\>")))
 
 (defvar pov-all-directives-matcher
   (eval-when-compile
@@ -1020,24 +1020,24 @@ font-pov-keyword-face"
 			  "sphere_sweep" "superellipsoid" "text"
 			  "torus" "triangle" "quadric" "quartic") t)
 	    "\\)\\>")))
-		       
-		       
+
+
 
 (defvar pov-font-lock-keywords
   (list
    ;; highlight variable names after '#declare/#local'
-   (list "\\<\\(#declare\\|#local\\)\\>[ \t\n]*\\(\\sw+\\)" 
+   (list "\\<\\(#declare\\|#local\\)\\>[ \t\n]*\\(\\sw+\\)"
 	 '(2 font-pov-variable-face nil t))
    ;; highlight csg-keywords
-   (list "\\<\\(difference\\|intersection\\|merge\\|union\\)\\>" 
+   (list "\\<\\(difference\\|intersection\\|merge\\|union\\)\\>"
 	 '(1 font-pov-csg-face))
    ;; highlight variable names after '#macro'
-   (list "\\<\\(#macro\\)\\>[ \t\n]*\\(\\sw+\\)" 
+   (list "\\<\\(#macro\\)\\>[ \t\n]*\\(\\sw+\\)"
 	 '(2 font-pov-macro-name-face nil t))
    ;; highlight numbers with type-face
-   (list 
+   (list
     "\\(\\<\\([0-9]*\\.[0-9]+\\|[0-9]+\\)\\|\\.[0-9]+\\)\\([eE][+\\-]?[0-9]+\\)?\\>"
-	 '(1 font-pov-number-face))
+    '(1 font-pov-number-face))
    ;; highlight operators keywords
    (list "\\([\\-\\+\\|\\^=&!?:/\\>\\<\\*]+\\)" '(1 font-pov-operator-face))
    ;; highlight directives
@@ -1048,7 +1048,7 @@ font-pov-keyword-face"
    (list pov-all-keyword-matcher '(1 font-pov-keyword-face))
    )
   "Expressions to highlight in PoV mode."
-)
+  )
 ;; -- end C.H --
 
 
@@ -1093,16 +1093,16 @@ current word based on point location.
 
   (setq font-lock-keywords pov-font-lock-keywords)
   (setq font-lock-defaults '(pov-font-lock-keywords))
-;;   (if (and (boundp 'running-xemacs) running-xemacs)
-;;       (pov-toolbar))
+  ;;   (if (and (boundp 'running-xemacs) running-xemacs)
+  ;;       (pov-toolbar))
   (if pov-imenu-in-menu
       (pov-helper-imenu-setup))
 
   ;; Create and show the insert menu
-  (if (and (file-exists-p pov-insertmenu-location) 
-       (file-directory-p pov-insertmenu-location))
-       (pov-call-the-insert-menu))
-     
+  (if (and (file-exists-p pov-insertmenu-location)
+	   (file-directory-p pov-insertmenu-location))
+      (pov-call-the-insert-menu))
+
 
   (set-syntax-table pov-mode-syntax-table)
   (setq comment-start "// "
@@ -1115,7 +1115,7 @@ current word based on point location.
   (setq mode-name "PoV")
   (setq major-mode 'pov-mode)
   (run-hooks 'pov-mode-hook)
-)
+  )
 
 (defun pov-tab ()
   "Command assigned to the TAB key in PoV mode."
@@ -1205,7 +1205,7 @@ current word based on point location.
     (indent-to goal)))
 
 (defun pov-indent-top-level nil
-  (if (save-excursion 
+  (if (save-excursion
 	(forward-line -1)
 	(looking-at "\\<#declare[ \t]+[0-9a-zA-Z_]+[ \t]*=[ \t]*$"))
       (indent-to pov-indent-under-declare)))
@@ -1288,7 +1288,7 @@ character number of the character following `begin' or START if not found."
     (if (looking-at "\\<#else\\|#end\\|#break\\>")
 	(pov-indent-line))))
 
-; Taken from verilog-mode.el
+					; Taken from verilog-mode.el
 (defun pov-skip-backward-comment-or-string ()
   "Return true if in a string or comment"
   (let ((state
@@ -1307,16 +1307,16 @@ character number of the character following `begin' or START if not found."
      (t
       nil))))
 
-; *******************
-; *** Completions ***
-; *******************
+					; *******************
+					; *** Completions ***
+					; *******************
 ;; -------------------------------------------------------------------
 ;; C.H.: adapted completion to POV-Ray 3.5 syntax to some extent
 ;; -------------------------------------------------------------------
 (defvar pov-completion-str nil)
 (defvar pov-completion-all nil)
 (defvar pov-completion-pred nil)
-;(defvar pov-completion-buffer-to-use nil)
+					;(defvar pov-completion-buffer-to-use nil)
 (defvar pov-completion-flag nil)
 
 (defvar pov-global-keywords
@@ -1326,9 +1326,9 @@ character number of the character following `begin' or START if not found."
 
 (defvar pov-top-level-keywords
   '("global_settings" "camera" "light_source" "light_group" "media"
-  "background" "sky_sphere" "photons" "rainbow"))
+    "background" "sky_sphere" "photons" "rainbow"))
 
-(defvar pov-csg-scope-re 
+(defvar pov-csg-scope-re
   "\\<inverse\\|union\\|intersection\\|difference\\|merge\\>")
 
 (defvar pov-solid-primitive-keywords
@@ -1351,7 +1351,7 @@ character number of the character following `begin' or START if not found."
 
 (defvar pov-prism-keywords
   '("linear_sweep" "conic_sweep" "linear_spline" "quadratic_spline"
-  "cubic_spline" "bezier_spline" "sturm"))
+    "cubic_spline" "bezier_spline" "sturm"))
 
 (defvar pov-patch-primitive-keywords
   '("bicubic_patch" "disc" "smooth_triangle" "triangle" "polygon" "mesh" "mesh2"))
@@ -1359,8 +1359,8 @@ character number of the character following `begin' or START if not found."
 (defvar pov-bicubic-keywords
   '("type" "flatness" "u_steps" "v_steps"))
 
-;defvar pov-bezier-keywords
-; '("accuracy" "rational" "trimmed_by"))
+					;defvar pov-bezier-keywords
+					; '("accuracy" "rational" "trimmed_by"))
 
 (defvar pov-infinite-solid-keywords
   '("plane" "cubic" "poly" "quadric" "quartic"))
@@ -1376,7 +1376,7 @@ character number of the character following `begin' or START if not found."
 
 (defvar pov-object-modifier-keywords
   '("clipped_by" "bounded_by" "hollow" "no_shadow" "no_reflection"
-  "no_image" "interior_texture"))
+    "no_image" "interior_texture"))
 
 (defvar pov-transformation-keywords
   '("rotate" "scale" "translate" "matrix" "transform"))
@@ -1391,23 +1391,23 @@ character number of the character following `begin' or START if not found."
 (defvar pov-isosurface-keywords
   '("function" "max_gradient" "contained_by" "threshold" "accuracy" "evaluate" "open"
     "max_trace"
-  "all_intersections"))
+    "all_intersections"))
 
 (defvar pov-texture-keywords
   '("pigment" "normal" "finish" "halo" "texture_map" "material_map"
-  "boxed" "planar" "cylindrical" "spherical"))
+    "boxed" "planar" "cylindrical" "spherical"))
 
 (defvar pov-pigment-keywords
   '("color" "colour" "colour_map" "color_map" "pigment_map" "pigment"
-  "image_map" "quick_color"))
+    "image_map" "quick_color"))
 
 (defvar pov-normal-keywords
   '("slope_map" "normal_map" "bump_map" "bump_size" "boxed"
-  "cylindrical" "planar" "spherical"))
+    "cylindrical" "planar" "spherical"))
 
 (defvar pov-finish-keywords
-  '("ambient" "diffuse" "brilliance" "phong" "phong_size" "specular" 
-    "roughness" "metallic" "reflection" "irid" 
+  '("ambient" "diffuse" "brilliance" "phong" "phong_size" "specular"
+    "roughness" "metallic" "reflection" "irid"
     "crand"))
 
 (defvar pov-reflection-keywords
@@ -1429,86 +1429,86 @@ character number of the character following `begin' or START if not found."
     "omega" "lambda" "warp"))
 
 (defvar pov-media-keywords '("intervals" "samples" "confidence"
-  "variance" "ratio" "absorption" "emission" "scattering" "density"
-  "color_map" "density_map" "light_group" "sample_method" "aa_level"
-  "aa_threshold" "jitter" "method"))
+			     "variance" "ratio" "absorption" "emission" "scattering" "density"
+			     "color_map" "density_map" "light_group" "sample_method" "aa_level"
+			     "aa_threshold" "jitter" "method"))
 
 (defvar pov-interior-keywords '("ior" "caustics" "fade_distance"
-  "fade_power" "media" "dispersion" "dispersion_samples"
-  "fade_color"))
+				"fade_power" "media" "dispersion" "dispersion_samples"
+				"fade_color"))
 
 (defvar pov-texture-keywords '("pigment" "normal" "finish"
-  "texture_map" "material_map"))
+			       "texture_map" "material_map"))
 
 (defvar pov-material-keywords '("texture" "interior"))
 
 (defvar pov-warp-keywords '("repeat" "black_hole" "turbulence"
-  "cylindrical" "spherical" "toroidal" "planar" "orientation"
-  "dist_exp" "major_radius" "offset" "flip" "strength" "falloff"
-  "inverse"))
+			    "cylindrical" "spherical" "toroidal" "planar" "orientation"
+			    "dist_exp" "major_radius" "offset" "flip" "strength" "falloff"
+			    "inverse"))
 
 (defvar pov-density-keyword '("colour" "colour_map" "boxed" "planar"
-  "cylindrical" "spherical"))
+			      "cylindrical" "spherical"))
 
 (defvar pov-fog-keywords '("fog_type" "distance" "color" "turbulence"
- "turb_depth" "omega" "lambda" "octaves" "fog_offset" "fog_alt" "up"))
+			   "turb_depth" "omega" "lambda" "octaves" "fog_offset" "fog_alt" "up"))
 
 (defvar pov-rainbow-keywords '("direction" "angle" "width" "distance"
- "jitter" "up" "arc_angle" "falloff_angle"))
+			       "jitter" "up" "arc_angle" "falloff_angle"))
 
 (defvar pov-global-settings-keywords '("adc_bailout" "ambient_light"
-  "assumed_gamma" "charset" "hf_gray_16" "irid_wavelength"
-  "max_intersections" "max_trace_level" "number_of_waves" "radiosity"
-  "reflection_samples" "photons" "noise_generator"))
+				       "assumed_gamma" "charset" "hf_gray_16" "irid_wavelength"
+				       "max_intersections" "max_trace_level" "number_of_waves" "radiosity"
+				       "reflection_samples" "photons" "noise_generator"))
 
 (defvar pov-radiosity-keywords '("adc_bailout" "always_sample"
-  "brightness" "count" "distance_maximum" "error_bound"
-  "gray_threshold" "low_error_factor" "minimum_reuse" "nearest_count"
-  "recursion_limit" "max_sample" "media" "normal" "pretrace_end"
-  "pretrace_start" "recursion_limit" "save_file"))
+				 "brightness" "count" "distance_maximum" "error_bound"
+				 "gray_threshold" "low_error_factor" "minimum_reuse" "nearest_count"
+				 "recursion_limit" "max_sample" "media" "normal" "pretrace_end"
+				 "pretrace_start" "recursion_limit" "save_file"))
 
 (defvar pov-object-keywords '("texture" "pigment" "finish" "interior"
- "normal" "no_shadow"))
+			      "normal" "no_shadow"))
 
 ;;AS
 (defvar pov-keyword-completion-alist
   (mapcar (function
 	   (lambda (item) (list item item)))
-	   (append 
-	    pov-global-keywords
-	    pov-top-level-keywords
-	    pov-solid-primitive-keywords
-	    pov-blob-keywords
-	    pov-heightfield-keywords
-	    pov-juliafractal-keywords
-	    pov-prism-keywords
-	    pov-patch-primitive-keywords
-	    pov-bicubic-keywords
-	    pov-infinite-solid-keywords
-	    pov-csg-keywords
-	    pov-light-source-keywords
-	    pov-object-modifier-keywords
-	    pov-transformation-keywords
-	    pov-camera-keywords
-	    pov-texture-keywords
-	    pov-pigment-keywords
-	    pov-normal-keywords
-	    pov-finish-keywords
-	    pov-reflection-keywords
-	    pov-irid-keywords
-	    pov-pattern-keywords
-	    pov-pattern-keywords
-	    pov-media-keywords
-	    pov-interior-keywords
-	    pov-texture-keywords
-	    pov-material-keywords
-	    pov-warp-keywords
-	    pov-fog-keywords
-	    pov-rainbow-keywords
-	    pov-global-settings-keywords
-	    pov-radiosity-keywords
-	    pov-object-keywords
-	    )))
+	  (append
+	   pov-global-keywords
+	   pov-top-level-keywords
+	   pov-solid-primitive-keywords
+	   pov-blob-keywords
+	   pov-heightfield-keywords
+	   pov-juliafractal-keywords
+	   pov-prism-keywords
+	   pov-patch-primitive-keywords
+	   pov-bicubic-keywords
+	   pov-infinite-solid-keywords
+	   pov-csg-keywords
+	   pov-light-source-keywords
+	   pov-object-modifier-keywords
+	   pov-transformation-keywords
+	   pov-camera-keywords
+	   pov-texture-keywords
+	   pov-pigment-keywords
+	   pov-normal-keywords
+	   pov-finish-keywords
+	   pov-reflection-keywords
+	   pov-irid-keywords
+	   pov-pattern-keywords
+	   pov-pattern-keywords
+	   pov-media-keywords
+	   pov-interior-keywords
+	   pov-texture-keywords
+	   pov-material-keywords
+	   pov-warp-keywords
+	   pov-fog-keywords
+	   pov-rainbow-keywords
+	   pov-global-settings-keywords
+	   pov-radiosity-keywords
+	   pov-object-keywords
+	   )))
 
 (defun pov-string-diff (str1 str2)
   "Return index of first letter where STR1 and STR2 differs."
@@ -1534,19 +1534,19 @@ character number of the character following `begin' or START if not found."
 	   ((looking-at "camera")
 	    (setq pov-completion-list pov-camera-keywords))
 	   ((looking-at "texture")
-	    (setq pov-completion-list 
+	    (setq pov-completion-list
 		  (append pov-texture-keywords pov-pattern-keywords)))
 	   ((looking-at "material")
-	    (setq pov-completion-list 
+	    (setq pov-completion-list
 		  (append pov-material-keywords pov-pattern-keywords)))
 	   ((looking-at "pigment")
-	    (setq pov-completion-list 
+	    (setq pov-completion-list
 		  (append pov-pigment-keywords pov-pattern-keywords)))
 	   ((looking-at "normal")
-	    (setq pov-completion-list 
+	    (setq pov-completion-list
 		  (append pov-normal-keywords pov-pattern-keywords)))
 	   ((looking-at "density")
-	    (setq pov-completion-list 
+	    (setq pov-completion-list
 		  (append pov-density-keywords pov-pattern-keywords)))
 	   ((looking-at "finish")
 	    (setq pov-completion-list pov-finish-keywords))
@@ -1590,23 +1590,23 @@ character number of the character following `begin' or START if not found."
 	    (setq pov-completion-list pov-photons-keywords))
 	   ((looking-at pov-csg-scope-re)
 	    (setq pov-completion-list (append
-				       pov-solid-primitive-keywords 
-				       pov-infinite-solid-keywords 
-				       pov-object-modifier-keywords 
+				       pov-solid-primitive-keywords
+				       pov-infinite-solid-keywords
+				       pov-object-modifier-keywords
 				       pov-csg-keywords)))
 	   (t
-	    (setq pov-completion-list 
-		  (append pov-object-modifier-keywords 
+	    (setq pov-completion-list
+		  (append pov-object-modifier-keywords
 			  pov-object-keywords))))
-	  (setq pov-completion-list 
+	  (setq pov-completion-list
 		(append pov-completion-list pov-transformation-keywords)))
-      (setq pov-completion-list (append 
+      (setq pov-completion-list (append
 				 pov-top-level-keywords
-				 pov-solid-primitive-keywords 
-				 pov-infinite-solid-keywords 
-				 pov-patch-primitive-keywords 
+				 pov-solid-primitive-keywords
+				 pov-infinite-solid-keywords
+				 pov-patch-primitive-keywords
 				 pov-csg-keywords)))
-    ;Append the language directives so that they are available at all places.
+					;Append the language directives so that they are available at all places.
     (setq pov-completion-list (append pov-completion-list pov-global-keywords))))
 
 (defun pov-completion (pov-completion-str pov-completion-pred pov-completion-flag)
@@ -1614,9 +1614,9 @@ character number of the character following `begin' or START if not found."
     (let ((pov-completion-all nil))
       (pov-get-scope)
       (mapc #'(lambda (s)
-	       (if (string-match (concat "\\<" pov-completion-str) s)
-		   (setq pov-completion-all (cons s pov-completion-all))))
-	      pov-completion-list)
+		(if (string-match (concat "\\<" pov-completion-str) s)
+		    (setq pov-completion-all (cons s pov-completion-all))))
+	    pov-completion-list)
       ;; Now we have built a list of all matches. Give response to caller
       (pov-completion-response))))
 
@@ -1662,11 +1662,11 @@ character number of the character following `begin' or START if not found."
 	 (e (save-excursion (skip-chars-forward "a-zA-Z0-9#_") (point)))
 	 (pov-completion-str (buffer-substring b e))
 	 ;; The following variable is used in pov-completion
-	 ;(pov-buffer-to-use (current-buffer))
+					;(pov-buffer-to-use (current-buffer))
 	 (allcomp (all-completions pov-completion-str 'pov-completion))
 	 (match (try-completion
 		 pov-completion-str (mapcar #'(lambda (elm)
-					       (cons elm 0)) allcomp))))
+						(cons elm 0)) allcomp))))
     ;; Delete old string
     (delete-region b e)
     ;; Insert match if found, or the original string if no match
@@ -1759,48 +1759,48 @@ without questions"
       (define-key pov-mode-map "\M-\t" 'pov-complete-word)
       (define-key pov-mode-map "\r" 'pov-newline)
       (define-key pov-mode-map "\C-c\C-cc" 'pov-command-query) ;AS
-      (define-key pov-mode-map "\C-c\C-ch" 'pov-keyword-help) 
+      (define-key pov-mode-map "\C-c\C-ch" 'pov-keyword-help)
       (define-key pov-mode-map "\C-c\C-cr" 'pov-tool-bar-command-render)
-      (define-key pov-mode-map "\C-c\C-cl" 'pov-show-render-output) 
+      (define-key pov-mode-map "\C-c\C-cl" 'pov-show-render-output)
       (define-key pov-mode-map "\C-c\C-c1" 'pov-menu-render-test)
       (define-key pov-mode-map "\C-c\C-c2" 'pov-menu-render-low)
       (define-key pov-mode-map "\C-c\C-c3" 'pov-menu-render-mid)
-      (define-key pov-mode-map "\C-c\C-c4" 'pov-menu-render-high)      
+      (define-key pov-mode-map "\C-c\C-c4" 'pov-menu-render-high)
       (define-key pov-mode-map "\C-c\C-c5" 'pov-menu-render-highest)
-      (define-key pov-mode-map "\C-c\C-ci" 'pov-open-include-file) 
-      (define-key pov-mode-map "\C-c\C-ce" 'pov-menu-external-viewer)      
-      (define-key pov-mode-map "\C-c\C-cv" 'pov-menu-internal-viewer)  
+      (define-key pov-mode-map "\C-c\C-ci" 'pov-open-include-file)
+      (define-key pov-mode-map "\C-c\C-ce" 'pov-menu-external-viewer)
+      (define-key pov-mode-map "\C-c\C-cv" 'pov-menu-internal-viewer)
 
-      ;; Misc menu 
+      ;; Misc menu
 
-      (define-key pov-mode-map [menu-bar Misc] 
+      (define-key pov-mode-map [menu-bar Misc]
 	(cons "Misc" (make-sparse-keymap "Misc")))
       (define-key pov-mode-map [menu-bar Misc comment]
-	    '(menu-item "Comment out region" comment-region
-			:help "Comment out the region")) 
-     (define-key pov-mode-map [menu-bar Misc uncomment]
-       '(menu-item "Uncomment the region" uncomment-region
-		   :help "Uncomment the region"))   
-     (define-key pov-mode-map [menu-bar Misc kwhelp]
-       '(menu-item "Keyword look up" pov-keyword-help
-		   :help "Open the documentation searching for a keyword"))
-     (define-key pov-mode-map [menu-bar Misc open-the-include]
-       '(menu-item "Open the standard include files" pov-open-include-file
-		   :help "Open the standard include files"))
-     
+	'(menu-item "Comment out region" comment-region
+		    :help "Comment out the region"))
+      (define-key pov-mode-map [menu-bar Misc uncomment]
+	'(menu-item "Uncomment the region" uncomment-region
+		    :help "Uncomment the region"))
+      (define-key pov-mode-map [menu-bar Misc kwhelp]
+	'(menu-item "Keyword look up" pov-keyword-help
+		    :help "Open the documentation searching for a keyword"))
+      (define-key pov-mode-map [menu-bar Misc open-the-include]
+	'(menu-item "Open the standard include files" pov-open-include-file
+		    :help "Open the standard include files"))
+
       ;;  View menu
-      
-      (define-key pov-mode-map [menu-bar View] 
+
+      (define-key pov-mode-map [menu-bar View]
 	(cons "View" (make-sparse-keymap "View")))
       (define-key pov-mode-map [menu-bar View ext]
 	'(menu-item "External" pov-menu-external-viewer
-		    :help "View the image using an external viewer")) 
+		    :help "View the image using an external viewer"))
       (define-key pov-mode-map [menu-bar View int]
 	'(menu-item "Internal" pov-menu-internal-viewer
 		    :help "View the image internally"))
-      
 
-	  
+
+
       ;; Render menu
       (define-key pov-mode-map [menu-bar Render]
 	(cons "Render" (make-sparse-keymap "Render")))
@@ -1830,22 +1830,22 @@ without questions"
 		    :help "Render at default quality"))
       ;; tool-bar entries for GNU Emacs
       (if (and font-pov-is-Emacs (image-type-available-p 'xpm))
-	  (progn 
+	  (progn
 	    (setq pov-viewicon (concat pov-icons-location "povview.xpm")
 		  pov-rendericon (concat pov-icons-location "povrender.xpm"))
-	    (define-key pov-mode-map [tool-bar  render] 
+	    (define-key pov-mode-map [tool-bar  render]
 	      ;;      '(menu-item "Render" pov-render-dialog
-	      `(menu-item "Render this file using the default quality" 
+	      `(menu-item "Render this file using the default quality"
 			  pov-tool-bar-command-render
 			  :image ,(create-image pov-rendericon )))
 
-	    (define-key pov-mode-map [tool-bar view] 
+	    (define-key pov-mode-map [tool-bar view]
 	      `(menu-item "Preview"   pov-tool-bar-command-view
 			  :image ,(create-image pov-viewicon)))))))
-  
 
 
-     
+
+
 
 ;; Hack to redindent end/else/break
 (if pov-autoindent-endblocks
@@ -1860,16 +1860,16 @@ without questions"
 
 
 ;; ***********************
-;; *** povkeyword help *** 
-;; *********************** 
+;; *** povkeyword help ***
+;; ***********************
 
 
 
 (defun pov-keyword-help nil
-   "look up the appropriate place for keyword in the POV documentation 
-using an external browser (set by browse-url.el). Keyword can be entered 
-and autocompleteted, default is word at point"
- (interactive)
+  "look up the appropriate place for keyword in the POV documentation
+using an external browser (set by browse-url.el). Keyword can be entered
+and autocompleted, default is word at point"
+  (interactive)
   (let* ((default (current-word))
 	 (input (completing-read
 		 (format "lookup keyword (default %s): " default)
@@ -1877,47 +1877,47 @@ and autocompleteted, default is word at point"
 	 (kw (if (equal input "")
 		 default
 	       input))
-	 (buffer (find-file-noselect  
-		  (concat 
-		   (file-name-as-directory pov-documentation-directory) 
+	 (buffer (find-file-noselect
+		  (concat
+		   (file-name-as-directory pov-documentation-directory)
 		   pov-documentation-keyword-index )))
 	 (buffer-index (find-file-noselect
 			(concat (file-name-as-directory pov-documentation-directory)
 				pov-documentation-index)))
-	; ( browse-url-generic-program pov-external-browser )
+					; ( browse-url-generic-program pov-external-browser )
 	 target-file)
     (with-current-buffer buffer
       (setq buffer-read-only t)
       (widen)
       (goto-char (point-min))
-      (setq case-fold-search t) ;; it's buffer-local 
-      (if (re-search-forward 
-	   (concat "<code>" kw "</code>") 
-	  (save-excursion       
-	      (search-forward "<code>z</code>")) t) 
+      (setq case-fold-search t) ;; it's buffer-local
+      (if (re-search-forward
+	   (concat "<code>" kw "</code>")
+	   (save-excursion
+	     (search-forward "<code>z</code>")) t)
 	  (progn (re-search-backward  "href=\"\\([^\"]+\\)\">")
 		 (setq target-file (match-string-no-properties 1))
 		 (if (not (string-match "s_.*\\.html" target-file))
-		     (setq target-file (concat 
-					pov-documentation-keyword-index  
+		     (setq target-file (concat
+					pov-documentation-keyword-index
 					target-file)))
-		 (browse-url (concat "file://" (file-name-as-directory 
+		 (browse-url (concat "file://" (file-name-as-directory
 						pov-documentation-directory)
 				     target-file)))
 	(progn (set-buffer buffer-index)
 	       (setq buffer-read-only t)
 	       (widen)
 	       (goto-char (point-min))
-	       (setq case-fold-search t) ;; it's buffer-local 
+	       (setq case-fold-search t) ;; it's buffer-local
 	       (if  (re-search-forward (concat "^[ \t]*" kw)
-				       (save-excursion (point-max)) t) 
+				       (save-excursion (point-max)) t)
 					; just the 1^ entry
-		    (progn (re-search-forward "href=\"\\([^\"]+\\)\">")
-		   	 (setq target-file (match-string-no-properties 1))
-			 (browse-url (concat "file://" 
-					     (file-name-as-directory 
-					      pov-documentation-directory)
-					     target-file)))
+		   (progn (re-search-forward "href=\"\\([^\"]+\\)\">")
+			  (setq target-file (match-string-no-properties 1))
+			  (browse-url (concat "file://"
+					      (file-name-as-directory
+					       pov-documentation-directory)
+					      target-file)))
 		 (message "Couldn't find keyword: %s, maybe you misspelled it" kw))))
       (kill-buffer buffer)
       (kill-buffer buffer-index))))
@@ -1934,15 +1934,15 @@ and autocompleteted, default is word at point"
 ;; 	 (kw (if (equal input "")
 ;; 		 default
 ;; 	       input)))
-;;     (browse-url (concat "http://www.google.com/custom?q=" 
-;; 			kw 
+;;     (browse-url (concat "http://www.google.com/custom?q="
+;; 			kw
 ;; 			"&sa=Google+Search&domains=povray.org%3B+news.povray.org%3B+"
 ;; 			"www.povray.org&sitesearch=www.povray.org"))))
 
 
-; **********************************
-; *** Open standard include file ***
-; **********************************
+					; **********************************
+					; *** Open standard include file ***
+					; **********************************
 ;; (defun pov-open-include-file nil
 ;;   (interactive)
 ;;   "Open one of the standard include files"
@@ -1956,7 +1956,7 @@ and autocompleteted, default is word at point"
 ;;     ;(get-buffer-create kw)
 ;;     ;(switch-to-buffer-other-window kw)
 ;;     ;(message (concat pov-include-dir (concat kw ".inc")))
-;;     (find-file-read-only (concat (file-name-as-directory pov-include-dir) 
+;;     (find-file-read-only (concat (file-name-as-directory pov-include-dir)
 ;; 				 (concat kw ".inc")))))
 ;;MP
 (defun pov-open-include-file nil
@@ -1964,7 +1964,7 @@ and autocompleteted, default is word at point"
   "Open one of the standard include files"
   (let* ((default (current-word))
 	 (input (completing-read
-		 (format 
+		 (format
 		  "File to open (default %s.inc), complete with TAB: " default)
 		 (directory-files pov-include-dir nil "\\.inc")))
 	 (kw (if (equal input "")
@@ -1973,12 +1973,12 @@ and autocompleteted, default is word at point"
 	 (target-file (concat (file-name-as-directory pov-include-dir) kw)))
     (if (file-exists-p target-file)
 	(find-file-read-only target-file)
-      (message "I can't find %s. 
+      (message "I can't find %s.
 Maybe you misspelled it?" target-file))))
 
-; ***************************
-; *** Commands for povray ***
-; ***************************
+					; ***************************
+					; *** Commands for povray ***
+					; ***************************
 
 ;;; Execution of Povray and View processes
 (defvar pov-next-default-command "Render" ;XXX
@@ -2046,18 +2046,18 @@ Maybe you misspelled it?" target-file))))
 	      pov-command
 	    default))
     (setq pov-next-default-command pov-command)
-  ;;XXX argl: all this information should be in pov-command-alist
-  (cond ((string-match pov-command pov-internal-view)
-	 (pov-display-image-xemacs pov-image-file)) ;XXX
-	((string-match pov-command pov-external-view)
-	 (pov-display-image-externally pov-image-file t))
-	(t
+    ;;XXX argl: all this information should be in pov-command-alist
+    (cond ((string-match pov-command pov-internal-view)
+	   (pov-display-image-xemacs pov-image-file)) ;XXX
+	  ((string-match pov-command pov-external-view)
+	   (pov-display-image-externally pov-image-file t))
+	  (t
 	   (setq pov-buffer-modified-tick-at-last-render
 		 (buffer-modified-tick))
-	;   (message (format
-	;	     "DEBUG: buffer %s modified tick%d "
-	;	     (buffer-name)
-	;	     (buffer-modified-tick)))
+					;   (message (format
+					;	     "DEBUG: buffer %s modified tick%d "
+					;	     (buffer-name)
+					;	     (buffer-modified-tick)))
 	   (pov-render-file pov-command (buffer-file-name) t)
 	   ))))
 
@@ -2082,47 +2082,47 @@ Maybe you misspelled it?" target-file))))
 	  (process nil))
 
       ;; if the user hasn't saved his pov-file, ask him
-    (if (buffer-modified-p)
-	(and (y-or-n-p
-	      (concat (buffer-name (current-buffer)) " modified; save ? "))
-	     (save-buffer)))
-    ;; assign the buffer local value of the render buffer name
-    (setq pov-render-buffer-name (format "*Povray Render %s*" file))
-    (set-buffer (get-buffer-create pov-render-buffer-name))
-    ;(switch-to-buffer (buffer-name))   % XXX use this for 2.11, and fix it
-    (erase-buffer)
-    (setq render-command (second (assoc pov-command pov-command-alist)))
-    (setq render-command-options (format
-				  (third (assoc pov-command pov-command-alist))
-				  file))
-    (setq render-command-history
-	  (fourth (assoc pov-command pov-command-alist)))
-    ;(message (format "DEBUG FUCK %s %s"render-command-options (or
-    ;		render-command-history "NIL")))
-    (if verify-render
-	 (setq render-command-options
-	       (read-string "Render with the following options: "
-			    render-command-options
-			    'render-command-history)))
-    (message (format "Running %s on %s" pov-command file))
-    (insert (format "Running %s on %s with: %s %s..." pov-command file
-		    render-command  render-command-options))
+      (if (buffer-modified-p)
+	  (and (y-or-n-p
+		(concat (buffer-name (current-buffer)) " modified; save ? "))
+	       (save-buffer)))
+      ;; assign the buffer local value of the render buffer name
+      (setq pov-render-buffer-name (format "*Povray Render %s*" file))
+      (set-buffer (get-buffer-create pov-render-buffer-name))
+					;(switch-to-buffer (buffer-name))   % XXX use this for 2.11, and fix it
+      (erase-buffer)
+      (setq render-command (second (assoc pov-command pov-command-alist)))
+      (setq render-command-options (format
+				    (third (assoc pov-command pov-command-alist))
+				    file))
+      (setq render-command-history
+	    (fourth (assoc pov-command pov-command-alist)))
+					;(message (format "DEBUG FUCK %s %s"render-command-options (or
+					;		render-command-history "NIL")))
+      (if verify-render
+	  (setq render-command-options
+		(read-string "Render with the following options: "
+			     render-command-options
+			     'render-command-history)))
+      (message (format "Running %s on %s" pov-command file))
+      (insert (format "Running %s on %s with: %s %s..." pov-command file
+		      render-command  render-command-options))
 
-    (setq process (apply 'start-process pov-command (current-buffer)
-			 render-command
-			 (split-string render-command-options)))
-    ;; memorize what we are doing
-    (setq pov-last-render-command pov-command)
-    ;; FIXME this might be dubious
-    (setf (fourth (assoc pov-command pov-command-alist))
-	  render-command-history)
-    ;;(message (format "DEBUG proc: %s" process))
-    ;;XXX 'coz pov-current-render-process is buffer-local
-    ;(get-buffer old-buffer)
-    (set-buffer old-buffer)
-    (setq pov-current-render-process process)
-    (set-process-filter process 'pov-render-filter)
-    (set-process-sentinel process 'pov-render-sentinel))))
+      (setq process (apply 'start-process pov-command (current-buffer)
+			   render-command
+			   (split-string render-command-options)))
+      ;; memorize what we are doing
+      (setq pov-last-render-command pov-command)
+      ;; FIXME this might be dubious
+      (setf (fourth (assoc pov-command pov-command-alist))
+	    render-command-history)
+      ;;(message (format "DEBUG proc: %s" process))
+      ;;XXX 'coz pov-current-render-process is buffer-local
+					;(get-buffer old-buffer)
+      (set-buffer old-buffer)
+      (setq pov-current-render-process process)
+      (set-process-filter process 'pov-render-filter)
+      (set-process-sentinel process 'pov-render-sentinel))))
 
 (defun pov-show-render-output ()
   "Pop up the output of the last render command."
@@ -2137,28 +2137,28 @@ Maybe you misspelled it?" target-file))))
       (error "No rendering done so far"))))
 
 (defun pov-render-sentinel (process event)
- "Sentinel for povray call."
- ;;so we aren't rendering any more ;XXX
- (setq pov-current-render-process nil)
- ;;If the process exists successfully then kill the ouput buffer
- (cond ((and 
-	 (equal 0 (process-exit-status process))
-	 (not pov-errors))
-	(setq pov-rendered-succesfully t)
-	(message "Image rendered succesfully"))
-       (t
-	(message (concat "Errors in " (process-name process)
-			", press C-c C-c l to display"))
-	(setq pov-rendered-succesfully nil))))
+  "Sentinel for povray call."
+  ;;so we aren't rendering any more ;XXX
+  (setq pov-current-render-process nil)
+  ;;If the process exists successfully then kill the ouput buffer
+  (cond ((and
+	  (equal 0 (process-exit-status process))
+	  (not pov-errors))
+	 (setq pov-rendered-succesfully t)
+	 (message "Image rendered succesfully"))
+	(t
+	 (message (concat "Errors in " (process-name process)
+			  ", press C-c C-c l to display"))
+	 (setq pov-rendered-succesfully nil))))
 
 
 (defun pov-render-filter (process string)
   "Filter to process povray output. Scrolls and extracts the
 filename of the output image (XXX with a horrible buffer-local-hack...)"
-  ;(message (format "DEBUG buffer name %s" (buffer-name (current-buffer))))
-;; I'm going to use (concat (file-name-sans-extension
-;; (buffer-file-name)) ".png"). Much simplier, and avoids the
-;; long-long-path-bug
+					;(message (format "DEBUG buffer name %s" (buffer-name (current-buffer))))
+  ;; I'm going to use (concat (file-name-sans-extension
+  ;; (buffer-file-name)) ".png"). Much simplier, and avoids the
+  ;; long-long-path-bug
   (let ((image-file nil))
     (with-current-buffer (process-buffer process)
       (save-excursion
@@ -2189,12 +2189,12 @@ filename of the output image (XXX with a horrible buffer-local-hack...)"
     (if (file-exists-p (pov-get-the-default-image-name))
 	(setq file (pov-get-the-default-image-name)) ;; MP
       (setq file
-	  (read-file-name "Which image file should I display? "))))
+	    (read-file-name "Which image file should I display? "))))
   (let ((view-command nil)
 	(view-options nil)
 	(view-history nil)
-	(other-view (gethash (concat pov-external-view file) 
-				pov-current-view-processes))
+	(other-view (gethash (concat pov-external-view file)
+			     pov-current-view-processes))
 	(process nil))
     (if (and other-view (processp other-view))  ;external
 	(if (not (y-or-n-p
@@ -2205,7 +2205,7 @@ filename of the output image (XXX with a horrible buffer-local-hack...)"
 			(third (assoc pov-external-view pov-command-alist))
 			file))
     (setq view-history (fourth (assoc pov-external-view pov-command-alist)))
-    (if verify-display 
+    (if verify-display
 	(setq view-options (read-string "View with the following options: "
 					view-options
 					view-history)))
@@ -2218,7 +2218,7 @@ filename of the output image (XXX with a horrible buffer-local-hack...)"
     (setf (fourth (assoc pov-external-view pov-command-alist)) view-history)
     ;;Sentinel for viewer call (XXX argl, what a hack)
     (set-process-sentinel process 'pov-external-view-sentinel)))
-    ;;	'(lambda (process event)
+;;	'(lambda (process event)
 
 (defun pov-display-image-xemacs (file)
   "Display the rendered image"
@@ -2234,22 +2234,22 @@ filename of the output image (XXX with a horrible buffer-local-hack...)"
 
 
 
-; *************
-; *** Imenu ***  
-; *************
+					; *************
+					; *** Imenu ***
+					; *************
 (defun pov-helper-imenu-setup ()
   (interactive)
-  ; (require 'imenu) ;; Make an index for imenu  
+					; (require 'imenu) ;; Make an index for imenu
   (if pov-imenu-only-macros
-  (setq imenu-generic-expression 
-	'((nil "^#macro\\s-+\\([A-Za-z_][A-Za-z_0-9]*\\)" 1)))
-  ;;I assume that #macro and #declare start at the beginning of the line,
-  ;;without spaces. Otherwise could be recursion loops.
-  (setq imenu-generic-expression 
-	'((nil "^#\\(declare\\|macro\\)\\s-+\\([A-Za-z_][A-Za-z_0-9]*\\)" 2)
-	  (nil "^\\(camera\\)" 1) ;; there is only one camera, isn't it?
-	  ("Lights" "^\\(light_source\\)" 1)
-	  ("Include" "^#include\\s-+\"\\([A-Za-z0-9_]+\\)\\.inc\"" 1))))
+      (setq imenu-generic-expression
+	    '((nil "^#macro\\s-+\\([A-Za-z_][A-Za-z_0-9]*\\)" 1)))
+    ;;I assume that #macro and #declare start at the beginning of the line,
+    ;;without spaces. Otherwise could be recursion loops.
+    (setq imenu-generic-expression
+	  '((nil "^#\\(declare\\|macro\\)\\s-+\\([A-Za-z_][A-Za-z_0-9]*\\)" 2)
+	    (nil "^\\(camera\\)" 1) ;; there is only one camera, isn't it?
+	    ("Lights" "^\\(light_source\\)" 1)
+	    ("Include" "^#include\\s-+\"\\([A-Za-z0-9_]+\\)\\.inc\"" 1))))
   (imenu-add-to-menubar "PoV"))
 
 ;; STAR INSERT MENU SUPPORT ;;
@@ -2275,10 +2275,10 @@ filename of the output image (XXX with a horrible buffer-local-hack...)"
 
 (defun pov-im-make-menu ()
   (easy-menu-define
-   pov-im-menu
-   pov-mode-map
-   "The POV-Ray Insert menu"
-   (cons "Insert" (pov-im-create-menu (pov-im-get-submenunames))))
+    pov-im-menu
+    pov-mode-map
+    "The POV-Ray Insert menu"
+    (cons "Insert" (pov-im-create-menu (pov-im-get-submenunames))))
   )
 
 (defun pov-im-create-menu (dirs)
@@ -2294,7 +2294,7 @@ filename of the output image (XXX with a horrible buffer-local-hack...)"
   )
 
 (defun pov-im-create-submenu (dir)
-  (cons (substring (file-name-nondirectory dir) 5) 
+  (cons (substring (file-name-nondirectory dir) 5)
 	(pov-im-get-menuitems (directory-files dir t ".*txt")))
   )
 
