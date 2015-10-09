@@ -441,12 +441,12 @@
   :group 'languages)
 
 
-(defcustom pov-include-dir "/usr/local/share/povray-3.6/include"
+(defcustom pov-include-dir "/usr/local/share/povray-3.7/include"
   "*The directory in which the povray includefiles reside."
   :type 'directory
   :group 'pov)
 
-(defcustom  pov-documentation-directory "/usr/local/share/doc/povray-3.6/html"
+(defcustom  pov-documentation-directory "/usr/local/share/doc/povray-3.7/html"
   "*The directory that contains the html documentation of povray"
   :type 'directory
   :group 'pov
@@ -585,9 +585,9 @@ This file should contain the general index for *all* the documentation"
   :type 'file
   :group 'pov)
 
-(defcustom pov-documentation-keyword-index "s_97.html"
+(defcustom pov-documentation-keyword-index "r3_3.html"
   "*Edit this only if the search-keyword function doesn't work!
-This file (tested on povlinux-3.6) should contain the index for the keywords (section 3)"
+This file (tested on povlinux-3.7) should contain the index for the keywords (section 3)"
   :type 'file
   :group 'pov)
 
@@ -1880,10 +1880,12 @@ and autocompleted, default is word at point"
 	 (buffer (find-file-noselect
 		  (concat
 		   (file-name-as-directory pov-documentation-directory)
-		   pov-documentation-keyword-index )))
+		   pov-documentation-keyword-index)
+		  t))
 	 (buffer-index (find-file-noselect
 			(concat (file-name-as-directory pov-documentation-directory)
-				pov-documentation-index)))
+				pov-documentation-index)
+			t))
 					; ( browse-url-generic-program pov-external-browser )
 	 target-file)
     (with-current-buffer buffer
@@ -1892,12 +1894,13 @@ and autocompleted, default is word at point"
       (goto-char (point-min))
       (setq case-fold-search t) ;; it's buffer-local
       (if (re-search-forward
-	   (concat "<code>" kw "</code>")
+	   (concat "<code><a href=.*>" kw "</a></code>")
 	   (save-excursion
-	     (search-forward "<code>z</code>")) t)
+	     (re-search-forward "<code><a href=.*>z</a></code>"))
+	   t)
 	  (progn (re-search-backward  "href=\"\\([^\"]+\\)\">")
 		 (setq target-file (match-string-no-properties 1))
-		 (if (not (string-match "s_.*\\.html" target-file))
+		 (if (not (string-match "r.*\\.html" target-file))
 		     (setq target-file (concat
 					pov-documentation-keyword-index
 					target-file)))
